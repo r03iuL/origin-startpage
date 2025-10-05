@@ -16,14 +16,13 @@ body {
 .welcome {
     display: grid;
     place-items: center;
-    gap: 1.5rem;
-    padding-top: 5vh; /* keep your spacing */
+    gap: 1rem;
+    padding-top: 4vh;
 }
 
 .welcome h1 {
     font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 1rem;
     letter-spacing: -0.02em;
     background: linear-gradient(45deg, #979797, #4c4c4d);
     -webkit-background-clip: text;
@@ -45,7 +44,7 @@ body {
     outline: none;
 }
 
-.search-btn{
+.search-btn {
     background-color: transparent;
     border: none;
 }
@@ -60,13 +59,13 @@ body {
     gap: 1rem;
     width: min(1100px, 90%);
     margin: 2rem auto 0 auto;
-    height: calc(100vh - 250px);
+    height: 70vh;
 }
 
 /* Left side */
 .content-left {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: calc(84px * 2 + 50px) auto;
     gap: 1rem;
     min-height: 0;
 }
@@ -75,22 +74,24 @@ body {
 
 .shortcut-icons {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-auto-rows: 84px;
-    gap: 14px;
+    gap: 1rem;
     align-items: center;
     justify-items: center;
-    padding: 0 0.5rem;
-    height: calc(84px * 2 + 14px);
+    place-items: center;
+    padding: 1rem;
+    height: calc(84px * 2 + 50px);
     border: 1px solid black;
 }
 
 .icon {
     display: grid;
     place-items: center;
+    padding: 1rem;
     width: 72px;
     aspect-ratio: 1;
-    border-radius: 12px;
+    border-radius: 5px;
     background: #868689;
     text-decoration: none;
 }
@@ -102,7 +103,7 @@ body {
 /* List of links  */
 .shortcut-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
     border: 1px solid black;
 }
@@ -110,28 +111,33 @@ body {
 .link-grp {
     display: flex;
     flex-direction: column;
+    padding: 0rem 2rem 0rem 1rem;
+    /* border: 1px solid green; */
+    margin-top: px;
 }
 .link-grp h2 {
-    font: 600 1rem/1.2 system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-        sans-serif;
+    font-family: monospace;
     text-decoration: underline;
     text-underline-offset: 4px;
     margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 .link-grp-column {
     display: flex;
     flex-direction: column;
-
     list-style: none;
-    margin: 0 auto;
-    padding: 0;
-}
-.link-grp-column li + li {
-    margin-top: 0.25rem;
+    margin-top: .6rem;
+    
 }
 .link-grp-column a {
+    margin: .2rem 0;
+    /* border: 1px solid blue; */
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #000;
 }
 
 /* Right Side */
@@ -145,6 +151,8 @@ body {
 .time {
     padding: 1rem;
     border: 1px solid #000;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .todo {
