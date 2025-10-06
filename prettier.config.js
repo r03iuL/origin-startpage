@@ -15,5 +15,5 @@ module.exports = {
     htmlWhitespaceSensitivity: "ignore", // Preserve whitespace/line breaks in HTML instead of collapsing them
 
     // ---------- CSS ----------
-    singleAttributePerLine: true, // Force attributes in HTML/CSS-in-JS to break into multiple lines when multiline
+    //singleAttributePerLine: true, // Force attributes in HTML/CSS-in-JS to break into multiple lines when multiline
 };
