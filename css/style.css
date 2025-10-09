@@ -38,14 +38,11 @@
 }
 html,
 body {
-    height: 100%;
+    height: 100vh;
     background-color: var(--ctp-base);
     color: var(--ctp-text);
 }
 
-body {
-    max-height: 100vh;
-}
 
 .welcome {
     display: grid;
@@ -173,7 +170,7 @@ body {
 /* List of links  */
 .shortcut-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
     background: var(--ctp-mantle);
     border: 1px solid var(--ctp-surface2);
@@ -219,6 +216,13 @@ body {
 .link-grp-column a:hover {
      color: var(--ctp-flamingo);
     text-decoration-color: var(--ctp-flamingo);
+}
+
+.ext-icon{
+    display: none;
+}
+.link-grp-column a:hover .ext-icon{
+    display: inline-block;
 }
 
 /* Right Side */
