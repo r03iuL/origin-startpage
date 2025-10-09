@@ -39,6 +39,7 @@
 html,
 body {
     height: 100vh;
+    min-height: 1000px;
     background-color: var(--ctp-base);
     color: var(--ctp-text);
 }
@@ -118,7 +119,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 1rem;
-    width: min(1100px, 90%);
+    width: min(1260px, 100%);
     margin: 2rem auto 0 auto;
     height: 70vh;
 }
@@ -126,7 +127,7 @@ body {
 /* Left side */
 .content-left {
     display: grid;
-    grid-template-rows: calc(84px * 2 + 50px) auto;
+    grid-template-rows: calc(84px * 2 + 50px) 350px;
     gap: 1rem;
     min-height: 0;
 }
@@ -142,7 +143,7 @@ body {
     justify-items: center;
     place-items: center;
     padding: 1rem;
-    height: calc(84px * 2 + 50px);
+    /* height: calc(85px * 2 + 50px); */
     background: var(--ctp-mantle);
     border: 1px solid var(--ctp-surface2);
 }
@@ -171,7 +172,7 @@ body {
 .shortcut-links {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5rem;
     background: var(--ctp-mantle);
     border: 1px solid var(--ctp-surface2);
 }
@@ -180,30 +181,29 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0rem 2rem 0rem 1rem;
-    /* border: 1px solid green; */
-    margin-top: px;
+    text-align: left;
+    width: 100%;
 }
 .link-grp h2 {
     font-family: monospace;
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: .8rem;
     margin: 0;
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
     color: var(--ctp-lavender);
 }
 .link-grp-column {
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin-top: 0.6rem;
+    margin-top: 1.2rem;
 }
 .link-grp-column a {
     margin: 0 0 0.4rem 0.1rem;
     /* border: 1px solid blue; */
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     color: var(--ctp-text);
     position: relative;
@@ -245,8 +245,7 @@ body {
 .todo {
     padding: 1rem;
     overflow: auto;
-    min-height: 0;
-    height: 100%;
+    height: 510px;
     display: grid;
     align-content: start;
     gap: 0.5rem;
