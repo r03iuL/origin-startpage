@@ -112,8 +112,6 @@ body {
         hue-rotate(190deg) brightness(105%) contrast(90%);
 }
 
-.search-btn:hover {
-}
 
 .search-bar:focus-within {
     transition: border-image 0.3s ease;
@@ -164,7 +162,7 @@ body {
 }
 
 .icon:hover {
-    background: var(--ctp-blue);
+    background: var(--ctp-flamingo);
 }
 
 .icon img {
@@ -215,11 +213,12 @@ body {
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-color: transparent;
-    transition: text-decoration-color 1s ease;
+    transition: text-decoration-color .3s ease;
 }
 
 .link-grp-column a:hover {
-    text-decoration-color: var(--ctp-blue);
+     color: var(--ctp-flamingo);
+    text-decoration-color: var(--ctp-flamingo);
 }
 
 /* Right Side */
