@@ -1,3 +1,5 @@
+![ss](assets/img/Screenshot.png)
+
 # 🌐 Origin - Personal Browser Homepage
 
 **Origin** is a zero-dependency, offline-first start page powered by native **HTML**, **CSS**, and **JavaScript**. Built for **speed**, **focus**, and **accessibility**, it keeps your homepage **fast**, **local**, and **private**.
