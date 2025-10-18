@@ -44,7 +44,6 @@ body {
     color: var(--ctp-text);
 }
 
-
 .welcome {
     display: grid;
     place-items: center;
@@ -66,6 +65,9 @@ body {
     color: transparent;
     font-size: 4rem;
 }
+.search-form {
+    display: flex;
+}
 
 .search-bar {
     display: flex;
@@ -73,7 +75,23 @@ body {
     border-bottom: 4px solid transparent;
     border-image: linear-gradient(90deg, var(--ctp-pink), var(--ctp-peach)) 1;
     padding: 8px 12px;
-    width: min(560px, 92%);
+    min-width: 700px;
+}
+
+#searchEngine {
+    background: var(--ctp-surface0);
+    color: var(--ctp-text);
+    border: 1px solid var(--ctp-surface2);
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    outline: none;
+}
+
+#searchEngine:hover {
+    border-color: var(--ctp-lavender);
+    cursor: pointer;
 }
 .search-bar input {
     flex: 1;
@@ -110,10 +128,70 @@ body {
         hue-rotate(190deg) brightness(105%) contrast(90%);
 }
 
-
 .search-bar:focus-within {
     transition: border-image 0.3s ease;
 }
+
+.custom-select {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selected-option {
+  padding: 6px;
+  background: var(--ctp-lavender);
+  border: 1px solid var(--ctp-surface2);
+  border-radius: 3px;
+}
+
+.selected-option img {
+  width: 30px;
+  height: 30px;
+}
+.selected-option:hover {
+    background: var(--ctp-flamingo);
+}
+
+/* Dropdown menu */
+.options-list {
+  position: absolute;
+  top: -50%;
+  left: 110%;
+  background:var(--ctp-lavender) ;
+  backdrop-filter: blur(10px);  
+  border: 1px solid var(--ctp-surface2);
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 100;
+  padding: 4px 0;
+  display: none;
+}
+
+.options-list .option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: #181825;
+}
+
+.options-list .option:hover {
+  background-color: var(--ctp-flamingo);
+  
+}
+
+.options-list img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Show dropdown when active */
+.options-list.show {
+  display: block;
+}
+
 
 .contents {
     display: grid;
@@ -187,7 +265,7 @@ body {
 .link-grp h2 {
     font-family: monospace;
     text-decoration: underline;
-    text-underline-offset: .8rem;
+    text-underline-offset: 0.8rem;
     margin: 0;
     font-size: 1.4rem;
     letter-spacing: 1px;
@@ -210,18 +288,18 @@ body {
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-color: transparent;
-    transition: text-decoration-color .3s ease;
+    transition: text-decoration-color 0.3s ease;
 }
 
 .link-grp-column a:hover {
-     color: var(--ctp-flamingo);
+    color: var(--ctp-flamingo);
     text-decoration-color: var(--ctp-flamingo);
 }
 
-.ext-icon{
+.ext-icon {
     display: none;
 }
-.link-grp-column a:hover .ext-icon{
+.link-grp-column a:hover .ext-icon {
     display: inline-block;
 }
 

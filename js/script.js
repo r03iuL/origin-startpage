@@ -1,19 +1,65 @@
-console.log("Script loaded!");
+//console.log("Script loaded!");
 
-// Greeting logic
+// ---------------------Greeting logic---------------------------------------------//
 let username = localStorage.getItem("originUsername");
 if (!username) {
-  username = prompt("What's your name?") || "Friend";
-  localStorage.setItem("originUsername", username);
+    username = prompt("What's your name?") || "Friend";
+    localStorage.setItem("originUsername", username);
 }
 document.getElementById("greeting").textContent = `Hello, ${username}`;
 
-// Search form
+// ---------------------------Search form----------------------------------------//
+
+let selectedEngine = "google";
+
+const selectBox = document.querySelector(".custom-select");
+const selected = selectBox.querySelector(".selected-option");
+const optionsList = selectBox.querySelector(".options-list");
+const options = optionsList.querySelectorAll(".option");
+
+selected.addEventListener("click", () => {
+    optionsList.classList.toggle("show");
+});
+
+// Set new selected engine on option click
+options.forEach((option) => {
+    option.addEventListener("click", () => {
+        const newValue = option.dataset.value;
+        selectedEngine = newValue;
+
+        const img = option.querySelector("img").src;
+        const alt = option.querySelector("img").alt;
+
+        // Replace selected option content with just the icon
+        selected.innerHTML = `<img src="${img}" alt="${alt}" />`;
+
+        optionsList.classList.remove("show");
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+  const isClickInside = selectBox.contains(event.target);
+  
+  if (!isClickInside) {
+    optionsList.classList.remove("show");
+  }
+});
+
+// Get selectedEngine when submitting the search form
 document.getElementById("searchForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const q = document.getElementById("searchInput").value.trim();
-  if (!q) return;
-  window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(q)}`;
+    e.preventDefault();
+    const q = document.getElementById("searchInput").value.trim();
+    if (!q) return;
+
+    const searchURLs = {
+        google: "https://www.google.com/search?q=",
+        duckduckgo: "https://duckduckgo.com/?q=",
+        bing: "https://www.bing.com/search?q=",
+    };
+
+    const url = searchURLs[selectedEngine] + encodeURIComponent(q);
+    window.open(url, "_blank");
 });
 
 
