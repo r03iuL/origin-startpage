@@ -46,6 +46,13 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// Close dropdown when clicking esc
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    optionsList.classList.remove("show");
+  }
+});
+
 // Get selectedEngine when submitting the search form
 document.getElementById("searchForm").addEventListener("submit", (e) => {
     e.preventDefault();
