@@ -1,6 +1,6 @@
 //console.log("Script loaded!");
 
-// ---------------------Greeting logic---------------------------------------------//
+// ---------------------Greeting logic------------------------------------//
 let username = localStorage.getItem("originUsername");
 if (!username) {
     username = prompt("What's your name?") || "Friend";
@@ -8,7 +8,7 @@ if (!username) {
 }
 document.getElementById("greeting").textContent = `Hello, ${username}`;
 
-// ---------------------------Search form----------------------------------------//
+// ---------------------------Search form logics---------------------------//
 
 let selectedEngine = "google";
 
@@ -70,7 +70,7 @@ document.getElementById("searchForm").addEventListener("submit", (e) => {
 });
 
 
-// === Digital clock with seconds ===
+//----------------Digital clock with seconds----------------------//
 
 // Select the time element
 const timeEl = document.querySelector(".time");

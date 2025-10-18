@@ -331,14 +331,20 @@ body {
     border: 1px solid var(--ctp-surface2);
     color: var(--ctp-text);
 }
+.todo-heading{
+    font-size: 1.6rem;
+    margin-bottom: .4rem;
+}
 .todo ul {
     list-style-type: none;
 }
 .todo-form {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 1rem;
     padding: 0.2rem;
-    width: 90%;
+    width: 100%;
     border-bottom: 2px solid var(--ctp-lavender);
 }
 .todo-input {
@@ -346,7 +352,7 @@ body {
     border: 0;
     background: transparent;
     outline: none;
-    color: var(--ctp-text);
+    color: var(--ctp-flamingo);
 }
 
 #todoInput::placeholder {
@@ -364,16 +370,17 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: left;
+    padding: 0.5rem;
 }
 
-.todo-item .text {
-    flex: 1 1 auto;
-    min-width: 0;
-    width: 40%;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    color: var(--ctp-text);
+.todo-item:hover{
+    background-color: var(--ctp-crust);
+    color: var(--ctp-flamingo);
+}
+
+.todo-item-vis{
+    max-width: 85%;
+    line-height: 1.8rem;
 }
 .add-todo-btn {
     background-color: transparent;
@@ -388,7 +395,7 @@ body {
 
 .remove img,
 .edit img {
-    width: 14px;
+    width: 16px;
     filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(600%)
         hue-rotate(190deg);
 }
